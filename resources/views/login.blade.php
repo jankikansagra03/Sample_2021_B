@@ -1,11 +1,27 @@
 @extends('master')
+@if (session()->has('succ'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!! </strong> {{ session('succ') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
+@if (session()->has('error'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Error!! </strong> {{ session('error') }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+@endif
 @section('dynamic_1')
     <div class="container">
         <div class="row">
             <div class="offset-lg-3 offset-md-3 col-6">
                 <h1>Login</h1>
                 <br>
-                <form method="post" action="{{ URL::to('/') }}/login_action">
+                <form method="post" action="{{ URL::to('/') }}/login_authentication">
                     @csrf
                     <div class="row">
                         <div class="col">
