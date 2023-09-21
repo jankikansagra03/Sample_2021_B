@@ -32,3 +32,8 @@ Route::view('Reactivate_deleted_account', 'Reactivate_deleted_account');
 Route::post('Reactivate_account', [LoginController::class, 'Reactivate_account']);
 Route::get('user_dashboard', [LoginController::class, 'user_dashboard']);
 Route::get('admin_dashboard', [LoginController::class, 'admin_dashboard']);
+Route::view('forget_password_form', 'forget_password_form');
+Route::post('forget_password_form_submit', [BeforeLoginController::class, 'forget_password_form_submit']);
+Route::get('verify_forget_pwd_otp/{email}/{token}', [BeforeLoginController::class, 'verify_forget_pwd_otp']);
+Route::post('verify_otp_forget_password_action', [BeforeLoginController::class, 'verify_otp_forget_password_action']);
+Route::post('reset_pwd_action', [BeforeLoginController::class, 'reset_pwd_action']);
