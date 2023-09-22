@@ -25,8 +25,8 @@
         <div class="row m-4">
             <div class="col-12">
                 <nav class="navbar navbar-expand-md navbar-dark">
-                    <a class="navbar-brand" href="#"><img src=" images/logo.png" class="img-fluid" height="35%"
-                            width="35%" /></a>
+                    <a class="navbar-brand" href="#"><img src="{{ URL::to('/') }}/images/logo.png"
+                            class="img-fluid" height="35%" width="35%" /></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#collapsibleNavbar">
                         <span class="bg-dark fa-sharp fa-solid fa-bars"></span>
@@ -72,7 +72,7 @@
 
         <div class="row align-items-center" style="background-color:#DE0826">
             <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12" style="text-align:center">
-                <img src="images/logo1.png" class="img-fluid" />
+                <img src="{{ URL::to('/') }}/images/logo1.png" class="img-fluid" />
             </div>
             <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12 my-auto" style="text-align:center">
                 <h3 style="color:white"> Quick Links >> </h3>

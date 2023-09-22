@@ -1,5 +1,4 @@
 @extends('master')
-
 @section('dynamic_1')
     @if (session()->has('error'))
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -11,7 +10,7 @@
     @endif
     <div class="container">
         <div class="row">
-            <div class="offset-lg-3 offset-md-3 col-6">
+            <div class="offset-lg-3 offset-md-3 col-12">
                 <h1> Verify OTP</h1>
                 <br>
                 <form action="{{ URL::to('/') }}/verify_otp_forget_password_action" method="post">

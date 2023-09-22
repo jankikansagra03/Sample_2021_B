@@ -36,10 +36,10 @@ class LoginController extends Controller
                     session()->put('user', $result->email);
                     session()->put('password', $result->password);
                     if ($result->role == "Normal") {
-                        echo "User";
+                        // echo "User";
                         return redirect('user_dashboard');
                     } else {
-                        echo "Admin";
+                        //  echo "Admin";
                         return redirect('admin_dashboard');
                     }
                 }
